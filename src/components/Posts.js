@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchPosts } from "../actions/postActions";
 
 class Posts extends Component {
   state = {
@@ -21,4 +23,4 @@ class Posts extends Component {
   }
 }
 
-export default Posts;
+export default connect(null, { fetchPosts })(Posts);
