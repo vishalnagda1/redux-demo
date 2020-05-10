@@ -1,8 +1,10 @@
 # Redux Demo
 
-[![Repository version](https://img.shields.io/badge/version-1.0.0--pre-brightgreen?style=plastic)](https://github.com/vishalnagda1/redux-demo/releases/tag/v1.0.0-pre)
+[![Repository version](https://img.shields.io/badge/version-1.0.0-brightgreen?style=plastic)](https://github.com/vishalnagda1/redux-demo/releases/tag/v1.0.0)
 
-This is a pre-release version of Redux Demo React application which performs the basic functionality of fetching posts and creating new post. This application is using open source APIs provided by [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to create and retrieve the posts.
+Redux Demo is a React application to demonstrate the implementation of Redux library in a React application. This application performs the basic functionality of fetching posts and creating new post, and stores the data in application level state.
+
+This application is using open source APIs provided by [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to create and retrieve the posts.
 
 ### Project Installation Guide
 
@@ -24,6 +26,9 @@ This is a pre-release version of Redux Demo React application which performs the
 4. run `npm start`
 5. Your project server is running at [localhost:3000](http://localhost:3000)
 
+#### Future Plan
+
+- upgrade the code and make use of **static getDerivedStateFromProps** instead of **UNSAFE_componentWillReceiveProps** component lifecycle. [Read more...](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
 #### Contributing
 
