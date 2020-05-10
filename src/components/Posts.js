@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchPosts } from "../actions/postActions";
 
@@ -22,6 +23,11 @@ class Posts extends Component {
     );
   }
 }
+
+Posts.protoType = {
+  fetchPosts: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   posts: state.posts.items, // here we used key posts because we used the same key in rootReducer
