@@ -27,4 +27,8 @@ class Posts extends Component {
   }
 }
 
-export default connect(null, { fetchPosts })(Posts);
+const mapStateToProps = (state) => ({
+  posts: state.posts.items, // here we used key posts because we used the same key in rootReducer
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);
