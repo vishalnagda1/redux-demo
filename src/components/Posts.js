@@ -7,6 +7,10 @@ class Posts extends Component {
     posts: [],
   };
 
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
+
   render() {
     const postItems = this.state.posts.map((post) => (
       <div key={post.id}>
