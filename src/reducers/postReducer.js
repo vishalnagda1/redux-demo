@@ -1,5 +1,4 @@
 import { FETCH_POSTS, NEW_POST } from "../actions/types";
-import { act } from "react-dom/test-utils";
 
 const initialState = {
   items: [],
