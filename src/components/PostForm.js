@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createPost } from "../actions/postActions";
 
 class PostForm extends Component {
   constructor(props) {
@@ -18,12 +21,12 @@ class PostForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const body = {
+    const post = {
       title: this.state.title,
       body: this.state.body,
     };
 
-    // Call Action
+    this.props.createPost(post);
   }
 
   render() {
