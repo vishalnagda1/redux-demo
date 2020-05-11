@@ -2,6 +2,8 @@
 
 [![Repository version](https://img.shields.io/badge/version-1.0.0-brightgreen?style=plastic)](https://github.com/vishalnagda1/redux-demo/releases/tag/v1.0.0)
 
+[Live Demo](https://vishalnagda1.github.io/redux-demo/) of the application.
+
 Redux Demo is a React application to demonstrate the implementation of Redux library in a React application. This application performs the basic functionality of fetching posts and creating new post, and stores the data in application level state.
 
 This application is using open source APIs provided by [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to create and retrieve the posts.
