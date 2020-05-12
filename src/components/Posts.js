@@ -8,9 +8,11 @@ class Posts extends Component {
     this.props.fetchPosts();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.newPost) {
-      this.props.posts.unshift(nextProps.newPost);
+  static getDerivedStateFromProps(props, state) {
+    if (props.newPost.id) {
+      if(!props.posts.some(item => item.id === props.newPost.id)){
+        props.posts.unshift(props.newPost);
+      }
     }
   }
 
