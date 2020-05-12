@@ -8,10 +8,22 @@ class Posts extends Component {
     this.props.fetchPosts();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.newPost) {
-      this.props.posts.unshift(nextProps.newPost);
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   if (nextProps.newPost) {
+  //     this.props.posts.unshift(nextProps.newPost);
+  //   }
+  // }
+
+  static getDerivedStateFromProps(props, state) {
+    // console.log(props.posts)
+    if (props.newPost.id) {
+      if(!props.posts.some(item => item.id === props.newPost.id)){
+        // console.log("Unique ID")
+        props.posts.unshift(props.newPost);
+      }
+      // this.props.posts.unshift(props.newPost);
     }
+    // console.log(props.posts)
   }
 
   render() {
